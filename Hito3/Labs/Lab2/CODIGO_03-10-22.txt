@@ -1,0 +1,608 @@
+/*
+CREATE DATABASE Universidad2;
+
+USE	universidad2;
+
+DROP DATABASE Universidad4;
+
+USE universidad2;
+
+CREATE TABLE estudiante(
+	codigo_sis varchar(20) PRIMARY KEY,
+	fullname varchar(25), 
+	edad integer,
+	email varchar (100)
+);
+
+CREATE TABLE materia(
+	Codigo_Materia varchar(20) PRIMARY KEY,
+	Nombre_Materia varchar(25), 
+	Aula varchar (10),
+);
+
+DROP TABLE estudiante;
+
+
+SELECT * FROM  estudiante , materia  , inscripcion;  
+
+INSERT INTO estudiante (codigo_sis,fullname,edad,email)
+VALUES  ('SIS146444','Edson Condori',18,'edson@gmail.com');
+
+INSERT INTO materia (Codigo_Materia,Nombre_Materia,Aula) 
+VALUES  ('PRO-I','Programacion I','214');
+-------------------------------------------  RELACIONAR TABLAS
+CREATE TABLE inscripcion(
+	id_estudiante integer PRIMARY KEY,
+	codigo_sis varchar(20),
+	codigo_Materia varchar(20),
+	semestre varchar (30),
+	gestion varchar (100)
+	FOREIGN KEY (codigo_sis) REFERENCES  estudiante (codigo_sis),      -- Nos sirve pararelacionar dos tablass // (en este caso relacionamos la tabla estudiante con inscripcion (con codigo_sis))
+	FOREIGN KEY (Codigo_Materia) REFERENCES  materia (Codigo_Materia),
+
+);
+
+SELECT * FROM inscripcion;
+
+DROP TABLE estudiante;   -- no nos dejara borrar la tabla ya que existe una relacion con otra. 
+
+
+DROP TABLE inscripcion;
+DROP TABLE estudiante;
+DROP TABLE materia;
+
+
+----------------------------------------------------------------------------------------------
+										--Otro ejercicio--
+CREATE TABLE estudiante(
+	ci varchar(12) PRIMARY KEY NOT NULL,     --NOT NULL evita que se manden datos vacios
+	nombres varchar(20) NOT NULL,
+	apellidos varchar (40) NOT NULL,
+	edad integer NOT NULL,
+	fono integer NOT NULL,
+	email varchar (100) NOT NULL
+);
+
+INSERT INTO estudiante (ci,nombres,apellidos,edad,fono,email)
+VALUES  ('415462-LP','Edson','Condori',18, 8798465,'edson@gmail.com');
+
+INSERT INTO estudiante (ci,nombres,apellidos,edad,fono,email)  -- Con el Not null no me permite mandar datos en blanco 
+VALUES  ('459749-LP','Pancho','Villa',35, 584985,'dadaddadawdaw');		 -- debe ser mandado si o si 
+
+SELECT * FROM estudiante;
+
+DROP TABLE estudiante;
+
+-----------------------------------------------------------------------
+----------------------Clase Base de Datos 29/08/22---------------------
+CREATE TABLE estudiante(
+	ci varchar(12) PRIMARY KEY, 
+	nombres varchar(20), 
+	apellidos varchar (40), 
+	edad integer, 
+	fono integer, 
+	email varchar (100) 
+);
+
+INSERT INTO estudiante (ci,nombres,apellidos,edad,fono,email)
+VALUES  ('415462-LP','Edson','Condori',18, 8798465,'edson@gmail.com');
+
+INSERT INTO estudiante (ci,nombres,apellidos,edad,fono,email)  
+VALUES  ('459749-LP','Pancho','Villa',35, 584985,'pancho@gmail.com');	 
+
+SELECT * FROM estudiante;
+
+DROP TABLE estudiante;
+
+------------------------------------------------------------
+
+create table Estudiantes(
+	ci varchar (20) Primary Key not null,  -- not null sirve para que no nos envien dados en blanco 
+	firstname varchar (30) not null,	-- se usa en las tablas en la parte final
+	lastname varchar (30) not null,
+	years integer not null,
+	phone integer not null,
+	email varchar (100) not null 
+);
+
+Insert Into Estudiantes (ci,firstname,lastname,years,phone,email)
+values ('156225-Lp','Edson','Condori',18 ,8456556 ,'edson@gmail.com');
+
+Insert Into Estudiantes (ci,firstname,lastname,years,phone,email)
+values ('146225-Lp','Edson','Condori',18, 4545458,'edsonc@gmail.com');
+
+select * from Estudiantes;
+Drop Table Estudiantes;
+
+truncate table Estudiantes; -- truncate table nombredelatabla   ---> esto nos sirve para eliminar todos los datos de una tabla
+							-- ojo no borra la tabla solo elimina los datos de la tabla	
+							-- OJO SOLO NOS SIRVE PARA LAS TABLAS
+
+---------------CREAMOS NUEVOS VALORES DESPUES DE EL truncate table---------------
+
+Insert Into Estudiantes (ci,firstname,lastname,years,phone,email)
+values ('156274-Lp','Edson','Condori',18 ,8456556 ,'edson@gmail.com');
+
+Insert Into Estudiantes (ci,firstname,lastname,years,phone,email)
+values ('1425474-Lp','Jose','Herrera',25,555458,'joseh@gmail.com');
+
+Insert Into Estudiantes (ci,firstname,lastname,years,phone,email)
+values ('155585-Lp','Juan','Marquez',18 ,8456556 ,'juan@gmail.com');
+
+select * from Estudiantes;
+
+------------------------Agregar un nuevo campo a una tabla-------------
+
+						Alter Table Estudiantes 
+						add direccion Varchar (200); ---- Alter Table nombredelatabla    
+				---->  add nombredelnuevocampo TIPO DE DATO (integer,varchar,etc )para añadir el nuevo campo
+
+Alter Table Estudiantes 
+add fax Varchar (200), genero varchar (10);
+
+select * from Estudiantes;
+
+--------------Eliminar una columna de la tabla-----------
+
+Alter Table Estudiantes Drop Column genero,fax;
+--Alter Table nombredelatabla Y -------> Drop Colum nombredelacolumna 
+--NOS SIRVE PARA ELIMINAR LA COLUMNA DE ESA TALBA
+
+select * from Estudiantes;
+
+---------------Cambiar el valor de varchar ----
+Alter Table Estudiantes alter Column genero char; --Nos Sirve para cambiar el valor de un Dato
+select * from Estudiantes;							-- Ponemos Alter Colum NombreDeLoQueSeDeseaCambiarElDato  NUEVO TIPO DE DATO (VARCHAR,INTEGER,CHAR,ETC)
+
+Execute sp_columns Estudiantes;    -- Nos permite visuañizar el tipo de dato usado
+
+
+--------------MANEJO DE CONSULTAS----INTRODUCCION----------
+----------------------CONSULTAS SQL------------------------
+
+--Mostrar los nombres y apellidos de los estudiantes 
+--1er Paso: nombres,apellidos
+--2do Paso: Estudiantes
+
+Select firstname,lastname  -- aqui debe ir lo que se quier mostrar	CAMPO
+From Estudiantes;			-- Aqui debe ir de donde se quiere obtener los datos TABLAS
+
+		select lastname,firstname,years
+		From Estudiantes;
+
+-----USANDO WHERE-----
+--mostrar todos los datos del estudiante donde cuyo nombre sea igual a jose
+
+
+--16-----Mostrar los nombres y apellidos de los estudiantes 
+
+--1er Paso: nombres,apellidos
+--2do Paso: Estudiantes
+--3er Paso: lastname=jose
+Select *				-- aqui debe ir lo que se quier mostrar	CAMPO
+From Estudiantes		-- Aqui debe ir de donde se quiere obtener los datos TABLAS
+Where firstname='Edson';-- Muestra lo que se esta buscando
+
+--17---Mostrar los registros donde los valores sean nulos
+
+Select *				-- aqui debe ir lo que se quier mostrar	CAMPO
+From Estudiantes		-- Aqui debe ir de donde se quiere obtener los datos TABLAS
+Where genero is null ;  -- IS NULL muestra los valores en blanco
+
+
+--18---mostrar si la edad es par o impar
+
+Select *				-- aqui debe ir lo que se quier mostrar	CAMPO
+From Estudiantes		-- Aqui debe ir de donde se quiere obtener los datos TABLAS
+Where years%2=0;		-- Para 0 pares  1 para Impares  o tambin EN BDA distinto es representado <> o !=
+
+
+----------MANEJO DE ALIAS------------------
+
+Select est.firstname,est.lastname,est.years	  --Debemos poner el alias antes de los campos ya que este alias ayudara
+											  --a poder saber los datos de dicha tabla ya que pueden exsistir diferentes 
+											  --tablas con los mismos campos o valores
+From Estudiantes AS est		-- AS sirve para asignar un alias/sobrenombre la tabla 
+Where est.years%2=1;
+
+*******************************************************************************************************
+*/  
+	
+
+
+/*
+
+	-- Class  26/06/22
+
+Drop database Universidad2;    -- Eliminamos nuetra database
+
+Create Database Universidad2; 
+Use  Universidad2;
+
+drop table if exists inscripcion;     --si existe la tabla lo elimina si no no
+drop table if exists estudiante;
+drop table if exists materia;
+
+
+
+-- Creamos la tabla escuela
+Create Table escuela
+(
+ id_esc Integer Identity Primary key not null,
+ nombre varchar(100) not null,
+ direccion Varchar (100) not null,
+);
+
+
+--Insertamos datos en la tabla escuela 
+INSERT INTO escuela (nombre,direccion) 
+VALUES  ('Ximena', 'Av. 6 de Agosto');
+INSERT INTO escuela (nombre,direccion) 
+VALUES  ('Juan', 'Av. 16 de Julio');
+INSERT INTO escuela (nombre,direccion) 
+VALUES  ('Jose', 'Rio Seco');
+INSERT INTO escuela (nombre,direccion) 
+VALUES  ('Carla', 'Extranca');
+INSERT INTO escuela (nombre,direccion) 
+VALUES  ('UE VILLA ', 'Extranca');
+INSERT INTO escuela (nombre,direccion) 
+VALUES  ('Shalom', 'Extranca');
+INSERT INTO escuela (nombre,direccion) 
+VALUES  ('Tarapaca', 'Extranca');
+
+--visualizamos los dayos de la tabla escuela 
+select * from escuela; 
+
+-- Creamos la tabla Materias
+Create table materias
+(
+   id_mat Integer Identity  Primary key Not Null,
+   nombre_mat Varchar (100) not null,
+   cod_mat Varchar (100) not null
+);
+
+--Ingresamos datos a la tabla materias
+INSERT INTO materias (nombre_mat,cod_mat) 
+VALUES  ('Fisica', 'Fis-216');
+INSERT INTO materias (nombre_mat,cod_mat) 
+VALUES  ('Calculo', 'Cal-156');
+INSERT INTO materias (nombre_mat,cod_mat) 
+VALUES  ('Base de Datos', 'BDA-208');
+INSERT INTO materias (nombre_mat,cod_mat) 
+VALUES  ('Programacion', 'Pro-216');
+INSERT INTO materias (nombre_mat,cod_mat) 
+VALUES  ('Programacion', 'Pro-521');
+INSERT INTO materias (nombre_mat,cod_mat) 
+VALUES  ('Fisica', 'Fis-541');
+INSERT INTO materias (nombre_mat,cod_mat) 
+VALUES  ('Algebra', 'Alg-216');
+
+
+--Creamos la tabla periodo
+Create table periodo
+(
+id_per Integer Identity Primary key not null,
+anno_gestion integer not null,
+semestre integer not null
+);
+ --Insetamos datos en la tabla periodo
+INSERT INTO periodo (anno_gestion,semestre) 
+VALUES  (2,5);
+INSERT INTO periodo (anno_gestion,semestre) 
+VALUES  (8,6);
+INSERT INTO periodo (anno_gestion,semestre) 
+VALUES  (2,1);
+INSERT INTO periodo (anno_gestion,semestre) 
+VALUES  (6,7);
+INSERT INTO periodo (anno_gestion,semestre) 
+VALUES  (8,2);
+INSERT INTO periodo (anno_gestion,semestre) 
+VALUES  (5,2);
+INSERT INTO periodo (anno_gestion,semestre) 
+VALUES  (1,1);
+select * from periodo;
+
+--Creamos la tabla estudiante
+Create table estudiante
+(
+id_est_cedula Integer Identity Primary Key not null,   -- el identity da un valor al primari key desde 1 HASTA 1 2 3 4 5 ....... N
+nombres varchar (100) not null,
+apellidos varchar (100) not null,
+genero varchar (100) not null,
+direccion varchar (100) not null,
+telefono integer not null,
+email varchar (100) not null,
+edad integer not null,
+id_esc Integer not null, 
+FOREIGN KEY (id_esc) REFERENCES  escuela (id_esc)       
+);
+
+--Ingresamos datos en la tabla estudiante
+select * from estudiante;
+
+INSERT INTO estudiante (nombres, apellidos, genero, direccion, telefono, email, edad, id_esc) 
+VALUES  ('Ximena', 'Arias Ballesteros', 'femenino', 'Av. 6 de Agosto', 79617575, 'xime@gmail.com', 25, 1);
+INSERT INTO estudiante (nombres, apellidos, genero, direccion, telefono, email, edad, id_esc) 
+VALUES  ('Juan', 'Arias', 'Masculino', 'Av. 16 de Julio', 12345678, 'JuanAr@gmail.com', 27, 2);
+INSERT INTO estudiante (nombres, apellidos, genero, direccion, telefono, email, edad, id_esc) 
+VALUES  ('Jose', 'Ballesteros', 'Masculino', 'Rio seco', 11223344, 'JosBa@gmail.com', 19, 3);
+INSERT INTO estudiante (nombres, apellidos, genero, direccion, telefono, email, edad, id_esc) 
+VALUES  ('Carla', 'Mendoza', 'femenino', 'Extranca', 87654321, 'CarlaMe@gmail.com', 20, 4);
+
+INSERT INTO estudiante (nombres, apellidos, genero, direccion, telefono, email, edad, id_esc) 
+VALUES  ('Joel', 'Lopez', 'Masculino', 'Extranca', 87654321, 'Joel@gmail.com', 25, 5);
+INSERT INTO estudiante (nombres, apellidos, genero, direccion, telefono, email, edad, id_esc) 
+VALUES  ('Maria', 'Alvarez', 'femenino', 'Lomas', 87654321, 'Maria@gmail.com', 35, 6);
+INSERT INTO estudiante (nombres, apellidos, genero, direccion, telefono, email, edad, id_esc) 
+VALUES  ('Jaime', 'Mendoza', 'Masculino', 'Villa Copacabana', 87654321, 'Jaime@gmail.com', 19, 7);
+
+Create table kardex
+(
+id_kar Integer Identity Primary Key not null,
+nota_num integer not null,
+nota_alfabe varchar (100) not null,
+estado varchar (100) not null,
+
+id_mat Integer not null,
+id_est_cedula Integer not null,
+id_per Integer not null,
+FOREIGN KEY (id_mat) REFERENCES  materias (id_mat),      
+FOREIGN KEY (id_est_cedula) REFERENCES  estudiante (id_est_cedula),
+FOREIGN KEY (id_per) REFERENCES periodo (id_per)      
+);
+
+select * from kardex; 
+
+INSERT INTO kardex(nota_num, nota_alfabe, estado,id_mat,id_est_cedula,id_per) 
+VALUES  (88, 'B', 'Aprobado',1,7,1);
+INSERT INTO kardex(nota_num, nota_alfabe, estado,id_mat,id_est_cedula,id_per) 
+VALUES  (72, 'B', 'Aprobado',1,8,2);
+INSERT INTO kardex(nota_num, nota_alfabe, estado,id_mat,id_est_cedula,id_per) 
+VALUES  (64, 'C', 'Aprobado',1,9,3);
+INSERT INTO kardex(nota_num, nota_alfabe, estado,id_mat,id_est_cedula,id_per) 
+VALUES  (81, 'B', 'Aprobado',1,10,4);
+
+INSERT INTO kardex(nota_num, nota_alfabe, estado,id_mat,id_est_cedula,id_per) 
+VALUES  (48, 'F', 'Reprobado',1,11,4);
+INSERT INTO kardex(nota_num, nota_alfabe, estado,id_mat,id_est_cedula,id_per) 
+VALUES  (50, 'F', 'Reprobado',1,12,4);
+INSERT INTO kardex(nota_num, nota_alfabe, estado,id_mat,id_est_cedula,id_per) 
+VALUES  (49, 'F', 'Reprobado',1,13,4);
+
+select * from escuela; 
+select * from materias; 
+select * from periodo;
+select * from estudiante; 
+select * from kardex; 
+
+-- Mostrar los datos de los que tengan mayor a 24 y sea masculino  
+
+ select nombres,apellidos 
+ from estudiante
+ where edad >= 24 and genero = 'Masculino' 
+
+ 
+ -- Mostrar los datos de los que tengan mayor a 24 y sea Femenino
+ select nombres,apellidos 
+ from estudiante
+ where edad >= 24 and genero = 'Femenino'
+
+
+ -- Mostrar los nombres y apellidos de todos los estudiantes aprobados
+ 
+ -- Primer paso revisar que tablas se debe de visitar
+
+ -- Estudiante  (Aqui esta los nombres y apellidos)
+ -- Kardex (Aqui esta si esta aprobado o no)
+
+ --2do paso : Tengo que ver si estas tablas se relacionan entre si
+ -- En este casi si se relaciona (en la tabla kardex se relaciona con la tabla estudiante)
+
+ -- SOLUCION --
+
+ Select est.nombres, est.apellidos, kar.nota_num    
+ FROM estudiante AS est
+	INNER JOIN kardex AS kar On kar.id_est_cedula = est.id_est_cedula   -- Cuando queremos relacionar dos tablas debemos poner INNER JOIN para una consulta sql
+ WHERE kar.nota_num>=51;
+ -- As nos siver para asignar un alias momentaneo a nuestra tabla
+ -- On Significa en (tablas "alias".lo que se quiere relacionar)
+
+
+ SELECT * FROM kardex;
+
+ -- mostrar las personas de genero Masculino que han reprobado <51
+
+ Select est.nombres, est.apellidos, est.edad 
+ FROM estudiante AS est
+	INNER JOIN kardex AS kar On kar.id_est_cedula = est.id_est_cedula   
+ WHERE kar.nota_num<51 and est.genero = 'Masculino';
+ */
+
+
+
+ --////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ --*****************************************************************************************************************
+ -- CLASS 03/10/22 USO DE INER JOIN CON CONSULTAS 
+
+
+ Create database uso_Inerjoin; -- creamos una nueva base  de datos
+ Use uso_Inerjoin;  -- nos poscicionamos en esta base de datos
+
+
+ -- Creamos la tabla para letras A
+ create table Letras_A
+ (
+ letra char not null
+ );
+
+ -- Ingresamos los datos a la tabla A
+ INSERT INTO Letras_A (letra)
+ VALUES ('D');
+ INSERT INTO Letras_A (letra)
+ VALUES ('E');
+  INSERT INTO Letras_A (letra)
+ VALUES ('F');
+  INSERT INTO Letras_A (letra)
+ VALUES ('G');
+  INSERT INTO Letras_A (letra)
+ VALUES ('H');
+
+
+ -- Creamos la tabla Letras_B 
+ Create table Letras_B
+ (
+ letra char not null
+ );
+ 
+ -- Ingresamos datos a la tabla Letras B
+INSERT INTO Letras_B (letra)
+VALUES ('B');
+INSERT INTO Letras_B (letra)
+VALUES ('A');
+INSERT INTO Letras_B (letra)
+VALUES ('E');
+INSERT INTO Letras_B (letra)
+VALUES ('H');
+
+SELECT * FROM Letras_B; -- Visualizamos los datos de letras_b
+
+-- Para mostras las letras que se relacionen entre Letras_a Y Letras_B en este caso -----> Para Letras E,H
+Select Let_A.letra, Let_B.letra    
+ FROM Letras_A AS Let_A
+	INNER JOIN Letras_B AS Let_B On Let_A.letra = Let_B.letra   -- Cuando queremos relacionar dos tablas debemos poner INNER JOIN para una consulta sql
+
+
+
+	--*******************************************************************
+	--  Otro ejercicio
+create table Numeros_A  -- creamos la tabla numeros_a
+ (
+ numero integer not null
+ );
+
+ -- Ingresamos datos a la tabla numeros_a
+ INSERT INTO Numeros_A (numero)
+ VALUES (1);
+ INSERT INTO Numeros_A (numero)
+ VALUES (2);
+  INSERT INTO Numeros_A (numero)
+ VALUES (3);
+  INSERT INTO Numeros_A (numero)
+ VALUES (4);
+  INSERT INTO Numeros_A (numero)
+ VALUES (5);
+   INSERT INTO Numeros_A (numero)
+ VALUES (6);
+   INSERT INTO Numeros_A (numero)
+ VALUES (7);
+
+ --//////////////  IMPORTANTE   ////////////////////
+
+ /*
+ --OTRA FORMA DE HACER AL MOMENTO DE INSERTAR DATOS A UNA TABLA 
+ -- ESTA MANERA ES UNA FORMA MUCHO MAS RAPIDO Y CORTO
+
+  INSERT INTO Numeros_A (numero)
+ VALUES (1), 
+  (2),
+  (3),
+  (4),
+  (5),
+  (6),
+  (7);
+  */
+
+
+
+create table Numeros_B  -- creamos la tabla numeros_b
+ (
+ numero integer not null
+ );
+
+   -- ingresamos datos a la tabla numeros_b
+ INSERT INTO Numeros_B (numero)
+ VALUES (4);
+ INSERT INTO Numeros_B (numero)
+ VALUES (5);
+  INSERT INTO Numeros_B (numero)
+ VALUES (6);
+  INSERT INTO Numeros_B (numero)
+ VALUES (7);
+  INSERT INTO Numeros_B (numero)
+ VALUES (8);
+   INSERT INTO Numeros_B (numero)
+ VALUES (9);
+  
+
+  -- MUESTRA TODOS LOS NUMEROS QUE TENGAN RELACION CON NUM_A Y NUM_B
+    	 Select Num_A.numero, Num_B.numero
+ FROM Numeros_A AS Num_A
+	INNER JOIN Numeros_B AS Num_B On Num_A.numero = Num_B.numero
+
+-- MUESTRA TODOS LOS NUMEROS QUE TENGAN RELACION CON NUM_A Y NUM_B Y QUE SEAN MENORES O IGUAL A 5
+  	 Select Num_A.numero, Num_B.numero
+ FROM Numeros_A AS Num_A
+	INNER JOIN Numeros_B AS Num_B On Num_A.numero = Num_B.numero
+ WHERE Num_B.numero <=5 AND Num_A.numero <=5
+
+ -- MUESTRA TODOS LOS NUMEROS QUE TENGAN RELACION CON NUM_A Y NUM_B Y QUE SEAN MAYORES O IGUAL A 5
+	 Select Num_A.numero, Num_B.numero
+ FROM Numeros_A AS Num_A
+	INNER JOIN Numeros_B AS Num_B On Num_A.numero = Num_B.numero
+ WHERE Num_B.numero >5 AND Num_A.numero >5
+
+
+
+
+ create table Notas_P1  -- creamos la tabla numeros_a
+ (
+ nota integer not null
+ );
+ 
+   INSERT INTO Notas_P1(nota)
+ VALUES (30), 
+  (40),
+  (51),
+  (60),
+  (75);
+
+  select * from Notas_P1;
+
+ create table Notas_P2  -- creamos la tabla numeros_a
+ (
+ nota integer not null
+ );
+
+    INSERT INTO Notas_P2(nota)
+ VALUES (60), 
+  (51),
+  (100);
+  
+  
+ create table Notas_P3  -- creamos la tabla numeros_a
+ (
+ nota integer not null
+ );
+
+    INSERT INTO Notas_P3(nota)
+ VALUES (20), 
+  (21),
+  (23),
+  (48),
+  (51),
+  (60);
+
+  Select not_p1.nota, not_p2.nota,not_p3.nota 
+ FROM Notas_P1 AS not_p1
+	INNER JOIN Notas_P2 AS not_p2 On not_p1.nota = not_p2.nota 
+	INNER JOIN Notas_P3 AS not_p3 On not_p2.nota = not_p3.nota 
+
+
+
+	
+
+  Select not_p1.nota, not_p2.nota,not_p3.nota 
+ FROM Notas_P1 AS not_p1
+	INNER JOIN Notas_P2 AS not_p2 On not_p1.nota = not_p2.nota 
+	INNER JOIN Notas_P3 AS not_p3 On not_p2.nota = not_p3.nota 
+	where not_p1.nota >=50 and not_p1.nota <=100
