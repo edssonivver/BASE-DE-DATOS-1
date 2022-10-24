@@ -3,7 +3,7 @@
 
 ## (っ▀¯▀)つ💻 HITO 1 💻
 
-**Directorio al repositorio del Hito 1**
+**Repositorio Completo del Hito 1**
 
 <A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/hito_1"> **(☞ﾟヮﾟ)☞ REPOSITORIOS DEL HITO 1**  </A>
 
@@ -14,21 +14,29 @@
 
 
 **<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/blob/main/hito_1/HOLA_MUNDO2.txt"> Trabajo 1 ☞ Hola Mundo </A>**
-**<p> <A href="https://github.com/edssonivver/BASE-DE-DATOS-1/blob/main/hito_1/QUE_ES_UNA_BASE_DE_DATOS.docx"> Trabajo 2 ☞ Que es una Base de Datos   (Archivo RAR)</A>
-</p>**
+<p> **<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/blob/main/hito_1/QUE_ES_UNA_BASE_DE_DATOS.docx"> Trabajo 2 ☞ Que es una Base de Datos   (Archivo RAR) 📚​</A>**
+</p>
 
 
-## 📖 Installation
+## (っ•́｡•́)っ :tw-1f4da: HITO 2 :tw-1f4da:
 
-SSR and CSR:
+**Repositorio Completo del Hito 2**
+<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_2"> **(☞ﾟヮﾟ)☞ REPOSITORIO COMPLETO DEL HITO 2**  </A>
 
-```sh
-cd keepages
+## ​🖥️​ APARTADOS DEL REPOSITORIO DEL HITO 2
 
-git checkout master
+***En este apartado se encuentran los Foros || Proyectos || Laboratorios del Hito 2 por separado.***
 
-npm install
-```
+
+**<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_2/Foros/FORO1"> Foro 1 ☞   Manejo del modelo entidad relacion [SQL] 💻 </A>**
+<p> **<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_2/Laboratorios/LAB1"> Laboratorio 1 ☞ Creacion de usuarios en SQL [Video y Pdf] 🎬​📙​</A>**
+
+**<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_2/ExamenH2">Examen Hito 2 ☞ Examen realizado del Hito 2 [SQL] 💻</A>**
+
+**<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_2/DefensaH2/DefensaFinalH2">Defensa Final Hito 2 ☞Defensa Realizadadel Hito 2 [PDF, Video,Pptx] ​📙​🎬 🎞️​</A>**
+</p>
+
+
 
 ## 📖  Development setup
 
