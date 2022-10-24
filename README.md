@@ -1,13 +1,12 @@
 <h1 align="center"> 😎 👨🏽‍💻​ BASE DE DATOS I 👨🏽‍💻​ 😎​</h1>
-<h3 align="center">Proyectos, Trabajos, Laboratorios </h3>
+<h3 align="center">Trabajos || Proyectos || Laboratorios </h3>
 
-## ✨ Demo
+## (っ▀¯▀)つHITO 1 💻
 
-Available in Heroku
+**Directorio al repositorio del Hito 1**
 
-```sh
-https://keeppagesbydw.herokuapp.com/
-```
+<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/hito_1"> (☞ﾟヮﾟ)☞ REPOSITORIOS DEL HITO 1  </A>
+
 
 ## 🚀 Usage
 
