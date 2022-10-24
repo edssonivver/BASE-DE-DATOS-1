@@ -1,20 +1,22 @@
 <h1 align="center"> 😎 👨🏽‍💻​ BASE DE DATOS I 👨🏽‍💻​ 😎​</h1>
 <h3 align="center">Trabajos || Proyectos || Laboratorios </h3>
 
-## (っ▀¯▀)つHITO 1 💻
+## (っ▀¯▀)つ💻 HITO 1 💻
 
 **Directorio al repositorio del Hito 1**
 
-<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/hito_1"> (☞ﾟヮﾟ)☞ REPOSITORIOS DEL HITO 1  </A>
+<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/hito_1"> **(☞ﾟヮﾟ)☞ REPOSITORIOS DEL HITO 1**  </A>
 
 
-## 🚀 Usage
+## 🚀 APARTADOS DEL REPOSITORIO DEL HITO 1
 
-Clone the repository
+***En este apartado se encuentran los trabajos del Hito 1 por separado.***
 
-```sh
-git clone https://github.com/dheeyi/keeppages.git
-```
+
+<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/blob/main/hito_1/HOLA_MUNDO2.txt">** Trabajo 1 ☞ Hola Mundo **</A>
+<p> <A href="https://github.com/edssonivver/BASE-DE-DATOS-1/blob/main/hito_1/QUE_ES_UNA_BASE_DE_DATOS.docx">** Trabajo 2 ☞ Que es una Base de Datos   (Archivo RAR)**</A>
+</p>
+
 
 ## 📖 Installation
 
