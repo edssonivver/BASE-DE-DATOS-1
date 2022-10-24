@@ -1,5 +1,5 @@
 <h1 align="center"> 😎 👨🏽‍💻​ BASE DE DATOS I 👨🏽‍💻​ 😎​</h1>
-<h3 align="center">Trabajos || Proyectos || Laboratorios </h3>
+<h3 align="center">Foros || Trabajos || Proyectos || Laboratorios </h3>
 
 ## (っ▀¯▀)つ💻 HITO 1 💻
 
@@ -18,7 +18,7 @@
 </p>
 
 
-## (っ•́｡•́)っ :tw-1f4da: HITO 2 :tw-1f4da:
+## (っ•́｡•́)っ📚  HITO 2 📚
 
 **Repositorio Completo del Hito 2**
 <A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_2"> **(☞ﾟヮﾟ)☞ REPOSITORIO COMPLETO DEL HITO 2**  </A>
@@ -37,39 +37,36 @@
 </p>
 
 
+## (っ▀¯▀)つ 🗂️​ HITO 3 🗂️​
 
-## 📖  Development setup
+**Repositorio Completo del Hito 3**
+<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito3"> **(☞ﾟヮﾟ)☞ REPOSITORIO COMPLETO DEL HITO 3 🗂️​**  </A>
 
-To run the application, it is necessary to execute
+## ​💻​​ APARTADOS DEL REPOSITORIO DEL HITO 3
 
-```sh
-npm run dev
-```
+***En este apartado se encuentran los Laboratorios || Proyectos del Hito 3 por separado.***
 
-## 📖  Production setup
 
-To run the application, it is necessary to execute
+**<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito3/Labs/Lab1"> Laboratorio 1 ☞   Laboratorio de clase 1 [SQL] 💻 </A>**
+<p> **<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito3/Labs/Lab2"> Laboratorio 2 ☞ Laboratorio de clase 2 (Uso de Inner Join) [Txt] 📄​ </A>**
 
-```sh
-npm run build
-npm run start
-```
+**<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito3/Labs/Lab3">Laboratorio 3 ☞ Laboratorio de clase 3 [SQL] 💻</A>**
 
-## ✨ Screenshots
+**<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_2/DefensaH2/DefensaFinalH2">Examen Hito 3 ☞ Examen del Hito 3 [SQL] 💻</A>**
+</p>
+
+## 
 
 <p align="center">
-    <img src="https://dl.dropboxusercontent.com/s/q19g1hovmz2k6te/brave_7KJLTmUUHG.png" width="450">
+    <img src="https://lh3.googleusercontent.com/XSDv6XYZ973bdxMBDJ1adLHpSSUv4vsZJaePpms21eZDl-27JIfTHIYXnnudwPfAg_1-59bKAarMhWGNagsTR2Gq0pAWBUw6CwYwH2V0TzDXZT9z1fKvr1vCOrk8nxZ-U7wVfOJq" width="450">
 </p>
 
 
-## 👤 Author
+## 🧑🏻‍💻 Author
 
-**Dheeyi William**
-
-- Twitter: [@dheeyi](https://twitter.com/dheeyi)
-- Github: [@dheeyi](https://github.com/dheeyi)
+**Edson Condori**
+- Github: [@edssonivver](https://github.com/edssonivver)
 
 ## 📝 License
 
-Copyright © 2021 [Dheeyi William](https://github.com/dheeyi).
-See ``MIT LICENSE`` for more information.
+Copyright © 2022 [Edson Condori](https://github.com/edssonivver).
