@@ -1,4 +1,4 @@
-<h1 align="center"> 😎 👨🏽‍💻​ BASE DE DATOS I 👨🏽‍💻​ 😎​</h1>
+<h1 align="center"> 🤖 👨🏽‍💻​ BASE DE DATOS I 👨🏽‍💻​ 🤖​</h1>
 <h3 align="center">Foros || Trabajos || Proyectos || Laboratorios </h3>
 
 ## (っ▀¯▀)つ💻 HITO 1 💻
