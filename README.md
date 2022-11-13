@@ -55,14 +55,28 @@
 **<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_2/DefensaH2/DefensaFinalH2">Examen Hito 3 ☞ Examen del Hito 3 [SQL] 💻</A>**
 </p>
 
-## 
+## (▀-▀) 🗂️​ HITO 4 🗂️ (▀-▀)​
 
+**Repositorio Completo del Hito 4**
+<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_4/Laboratorios"> **(☞ﾟヮﾟ)☞ REPOSITORIO COMPLETO DEL HITO 4 🤖​**  </A>
+
+## ​💻​​ APARTADOS DEL REPOSITORIO DEL HITO 4 🤖
+
+***En este apartado se encuentran los Laboratorios por separado.***
+
+
+**<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_4/Laboratorios/LABORATORIO_1"> Laboratorio 1 ☞   Laboratorio de clase 1 (Uso de Funciones) [SQL] 💻 </A>**
+<p> **<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_4/Laboratorios/LABORATORIO_2"> Laboratorio 2 ☞ Laboratorio de clase 2 (Uso y Creacion de Funciones) [SQL] 💻 ​ </A>**
+</p>
+
+## 
 <p align="center">
-    <img src="https://lh3.googleusercontent.com/XSDv6XYZ973bdxMBDJ1adLHpSSUv4vsZJaePpms21eZDl-27JIfTHIYXnnudwPfAg_1-59bKAarMhWGNagsTR2Gq0pAWBUw6CwYwH2V0TzDXZT9z1fKvr1vCOrk8nxZ-U7wVfOJq" width="450">
+    <img img src="https://media.tenor.com/qJ5evVs-_uUAAAAC/coding.gif" width="450">
+	
 </p>
 
 
-## 🧑🏻‍💻 Author
+## 💻 Author 🤖
 
 **Edson Condori**
 - Github: [@edssonivver](https://github.com/edssonivver)
