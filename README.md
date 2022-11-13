@@ -66,7 +66,7 @@
 
 
 **<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_4/Laboratorios/LABORATORIO_1"> Laboratorio 1 ☞   Laboratorio de clase 1 (Uso de Funciones) [SQL] 💻 </A>**
-<p> **<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_4/Laboratorios/LABORATORIO_2"> Laboratorio 2 ☞ Laboratorio de clase 2 (Uso y Creacion de Funciones) [SQL] 💻 ​ </A>**
+<p> **<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_4/Laboratorios/LABORATORIO_2"> Laboratorio 2 ☞ Laboratorio de clase 2 (Uso y Creacion de Funciones) [SQL] 💻 ​ **</A>
 </p>
 
 ## 
