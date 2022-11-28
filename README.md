@@ -67,6 +67,12 @@
 
 **<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_4/Laboratorios/LABORATORIO_1"> Laboratorio 1 ☞   Laboratorio de clase 1 (Uso de Funciones) [SQL] 💻 </A>**
 <p> **<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_4/Laboratorios/LABORATORIO_2"> Laboratorio 2 ☞ Laboratorio de clase 2 (Uso y Creacion de Funciones) [SQL] 💻 ​ **</A>
+
+**<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_4/Laboratorios/LABORATORIO_3"> Laboratorio 3 ☞ Laboratorio de clase 3 (Uso y Creacion de Funciones Propias) [SQL] 💻 ​ **</A>
+
+**<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_4/Examen_H4"> Examen Hito 4 ☞ Examen del Hito 4 (Examen) [SQL] 💻 ​ **</A>
+
+**<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_4/DefensaH4/DefensaFinalH4"> Defensa Final Hito 4 ☞ Defensa Final de Hito 4 (Defensa) [PDF / VIDEO / PTTX] ​📙​🎬 🎞️​ ​ **</A>
 </p>
 
 ## 
@@ -76,7 +82,7 @@
 </p>
 
 
-## 💻 Author 🤖
+## 💻 Author (▀-▀)
 
 **Edson Condori**
 - Github: [@edssonivver](https://github.com/edssonivver)
