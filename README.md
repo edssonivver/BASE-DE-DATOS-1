@@ -21,7 +21,8 @@
 ## (っ•́｡•́)っ📚  HITO 2 📚
 
 **Repositorio Completo del Hito 2**
-<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_2"> **(☞ﾟヮﾟ)☞ REPOSITORIO COMPLETO DEL HITO 2**  </A>
+<A href="https://github.com/edssonivver/BASE-DE-DATOS-1/tree/main/Hito_2"> 
+**(☞ﾟヮﾟ)☞ REPOSITORIO COMPLETO DEL HITO 2**  </A>
 
 ## ​🖥️​ APARTADOS DEL REPOSITORIO DEL HITO 2
 
